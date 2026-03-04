@@ -14,6 +14,169 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="./assets/css/default.css" />
 	<title>Brandon's Portfolio</title>
+	<style>
+		/* Modern Portfolio Styling */
+		:root {
+			--primary-color: #2563eb;
+			--secondary-color: #64748b;
+			--accent-color: #06b6d4;
+			--text-dark: #1e293b;
+			--text-light: #64748b;
+			--bg-light: #f8fafc;
+			--bg-white: #ffffff;
+			--shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+			--shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+			--shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+		}
+
+		body {
+			font-family: 'DM Sans', sans-serif;
+			line-height: 1.6;
+			color: var(--text-dark);
+		}
+
+		/* Enhanced post styling */
+		.post-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			gap: 2rem;
+			padding: 3rem 1rem;
+		}
+		
+		.post {
+			flex: 0 0 calc(33.333% - 1.5rem);
+			margin-bottom: 2rem;
+			background-color: var(--bg-white);
+			border-radius: 16px;
+			box-shadow: var(--shadow-sm);
+			transition: all 0.3s ease;
+			overflow: hidden;
+			border: 1px solid #e2e8f0;
+		}
+
+		.post:hover {
+			transform: translateY(-8px);
+			box-shadow: var(--shadow-lg);
+			border-color: var(--primary-color);
+		}
+
+		.img-wrapper {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 200px;
+			padding: 2rem;
+			background: linear-gradient(135deg, var(--bg-light) 0%, #f1f5f9 100%);
+		}
+
+		.img-wrapper img {
+			max-width: 80%;
+			max-height: 80%;
+			object-fit: contain;
+			filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+		}
+
+		.language-preview {
+			padding: 2rem;
+			min-height: 160px;
+		}
+
+		.language-preview h4 {
+			margin-top: 0;
+			margin-bottom: 1rem;
+			text-align: center;
+			color: var(--text-dark);
+			font-weight: 600;
+		}
+		
+		/* Enhanced section styling */
+		section {
+			padding: 5rem 0;
+		}
+
+		section h3 {
+			font-size: 2.25rem;
+			font-weight: 700;
+			margin-bottom: 3rem;
+			color: var(--text-dark);
+		}
+
+		/* Responsive adjustments */
+		@media screen and (max-width: 1100px) {
+			.post {
+				flex: 0 0 calc(50% - 1rem);
+			}
+		}
+
+		@media screen and (max-width: 700px) {
+			.post {
+				flex: 0 0 100%;
+			}
+
+			section {
+				padding: 3rem 0;
+			}
+
+			section h3 {
+				font-size: 1.875rem;
+			}
+		}
+
+		/* Projects section improvements */
+		.projects {
+			background: var(--bg-white);
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: var(--shadow-sm);
+			transition: all 0.3s ease;
+			border: 1px solid #e2e8f0;
+		}
+
+		.projects:hover {
+			transform: translateY(-4px);
+			box-shadow: var(--shadow-md);
+		}
+
+		.thumbnail {
+			width: 100%;
+			height: 250px;
+			object-fit: cover;
+			transition: transform 0.3s ease;
+		}
+
+		.projects:hover .thumbnail {
+			transform: scale(1.05);
+		}
+
+		.post-preview {
+			padding: 1.5rem;
+		}
+
+		.post-title {
+			font-size: 1.25rem;
+			font-weight: 600;
+			margin-bottom: 0.75rem;
+			color: var(--text-dark);
+		}
+
+		.post-intro {
+			color: var(--text-light);
+			line-height: 1.6;
+			margin-bottom: 1rem;
+		}
+
+		.post-preview a {
+			color: var(--primary-color);
+			text-decoration: none;
+			font-weight: 500;
+			transition: color 0.2s ease;
+		}
+
+		.post-preview a:hover {
+			color: var(--accent-color);
+		}
+	</style>
 </head>
 
 <body>
@@ -36,13 +199,13 @@
 				<div class="right-side-nav">
 					<div class="social">
 						<a href="https://www.drupal.org/u/brandoncb" target="_blank" >
-							<img src="assets/images/drupal.svg" alt="drupal" style="width: 50px; height: 50px;">
+							<img src="assets/images/drupal.svg" alt="drupal" style="width: 35px; height: 35px;">
 						</a>
 						<a href="https://www.linkedin.com/in/brandon-corona-bhardwaj/" target="_blank">
-							<img src="assets/images/linkedin.svg" alt="linkedin">
+							<img src="assets/images/linkedin.svg" alt="linkedin" style="width: 35px; height: 35px;">
 						</a>
 						<a href="https://github.com/brandon-cor" target="_blank">
-							<img src="assets/images/github-mark.svg" alt="github">
+							<img src="assets/images/github-mark.svg" alt="github" style="width: 35px; height: 35px;">
 						</a>
 					</div>
 					<div class="book-session">
@@ -61,13 +224,13 @@
 		<a href="#projects">Previous Work</a>
 		<div class="social">
 			<a href="https://www.drupal.org/u/brandoncb" target="_blank" >
-				<img src="assets/images/drupal.svg" alt="drupal" style="width: 50px; height: 50px;">
+				<img src="assets/images/drupal.svg" alt="drupal" style="width: 35px; height: 35px;">
 			</a>
 			<a href="https://www.linkedin.com/in/brandon-corona-bhardwaj/" target="_blank">
-				<img src="assets/images/linkedin.svg" alt="linkedin">
+				<img src="assets/images/linkedin.svg" alt="linkedin" style="width: 35px; height: 35px;">
 			</a>
 			<a href="https://github.com/brandon-cor" target="_blank">
-				<img src="assets/images/github-mark.svg" alt="github">
+				<img src="assets/images/github-mark.svg" alt="github" style="width: 35px; height: 35px;">
 			</a>
 		</div>
 		<div class="book-session">
@@ -81,7 +244,7 @@
 				<h1 id="greeting-wrapper" class="h1-top-right">
 					Hi, I'm Brandon</span>
 				</h1>
-				<p>I do <span id="rotating-text"></span></p>
+				<p>I build <span id="rotating-text"></span></p>
 			</div>
 			<h1 class="mobile-name">Brandon</h1>
 			<div class="intro-wrapper">
@@ -121,37 +284,28 @@
 				<div class="about-me" id="about-me">
 					<h3>About Me</h3>
 					<p>
-						I am currently enrolled in my final year of my computer science degree at UC Santa Cruz. I am
-						mostly focused
-						on contract work and personal projects such as this
-						page to continue developing my technical skills.
+						I'm a passionate full-stack developer and computer science student at UC Santa Cruz, with a growing interest in developer advocacy and community building. I specialize in modern web technologies and love creating tools that help developers build better applications.
 					</p>
 					<p>
-						On the side, I love to play soccer, watch pretty much any sports, and spend time with family & friends.
+						When I'm not coding, you'll find me contributing to open source projects, writing technical content, or playing soccer with friends. I'm excited about the intersection of technology and community, and I'm always looking for ways to help other developers grow.
 					</p>
 					<hr />
-					<h3>Skills</h3>
-					<p>Frontend developer who specializes in:</p>
+					<h3>Core Technologies</h3>
+					<p>Modern web development and developer advocacy tools I specialize in:</p>
 					<div id="skills">
 						<ul style="color: black;">
-							<li>Google TAG Manager</li>
-							<li>Google Analytics</li>
-							<li>WordPress</li>
-							<li>HTML/CSS</li>
-							<li>Firebase</li>
-							<li>Drupal</li>
-							<li>AWS</li>
-							<li>JS</li>
+							<li><strong>React & Next.js</strong> - Building scalable, interactive UIs</li>
+							<li><strong>Tailwind CSS</strong> - Utility-first styling for rapid development</li>
+							<li><strong>PostgreSQL</strong> - Robust database design and optimization</li>
+							<li><strong>TypeScript</strong> - Type-safe JavaScript development</li>
+							<li><strong>Node.js</strong> - Server-side JavaScript applications</li>
 						</ul>
 						<ul style="color: black;">
-							<li>Tailwind</li>
-							<li>Netlify</li>
-							<li>Jenkins</li>
-							<li>Docker</li>
-							<li>React</li>
-							<li>Figma</li>
-							<li>PHP</li>
-							<li>Git</li>
+							<li><strong>Docker</strong> - Containerized development environments</li>
+							<li><strong>AWS</strong> - Cloud infrastructure and deployment</li>
+							<li><strong>Git & GitHub</strong> - Version control and collaboration</li>
+							<li><strong>Technical Writing</strong> - Creating developer documentation</li>
+							<li><strong>Community Building</strong> - Developer advocacy and engagement</li>
 						</ul>
 					</div>
 				</div>
@@ -248,16 +402,16 @@
 	</section>
 	<section class="s2">
 		<div class="main-container" id="projects">
-			<h3 style="text-align: center;">Some of my past projects</h3>
+			<h3 style="text-align: center;">Featured Projects</h3>
 			<div class="post-wrapper">
 				<div>
 					<div class="projects">
 						<img class="thumbnail"  style="height:282px; object-fit: initial;
-						"src="assets/images/thruhiker-screenshot.png">
+						"src="assets/images/react-to-do-square.png">
 						<div class="post-preview">
-							<h6 class="post-title">Built with Swift</h6>
-							<p class="post-intro">Developed an IOS app with a team of developers to visualize progress on various hiking trails such as the Everest base camp, PCT, and more.</p>
-							<a href="https://apps.apple.com/us/app/thruhiker/id6503459093">Link</a>
+							<h6 class="post-title">React Task Management App</h6>
+							<p class="post-intro">Built with React, TypeScript, and Tailwind CSS. A modern task management application featuring drag-and-drop functionality, real-time updates, and responsive design.</p>
+							<a href="https://github.com/brandon-cor/react-todo-app">View Code</a>
 						</div>
 					</div>
 				</div>
@@ -266,21 +420,90 @@
 						<img class="thumbnail" style="height:282px; object-fit: initial;
 						"src="assets/images/uxly-screenshot.png">
 						<div class="post-preview">
-							<h6 class="post-title">Built with React</h6>
-							<p class="post-intro">Designed a webpage which is used to detect malicious transactions on a blockchain network, otherwise known as sybil nodes.</p>
-							<a href="https://uxly-analytics.web.app/dashboard">Link</a>
+							<h6 class="post-title">Blockchain Analytics Dashboard</h6>
+							<p class="post-intro">React-based dashboard for detecting sybil nodes in blockchain networks. Features real-time data visualization, advanced filtering, and comprehensive analytics using modern web technologies.</p>
+							<a href="https://uxly-analytics.web.app/dashboard">Live Demo</a>
 						</div>
 					</div>
 				</div>
 				<div>
 					<div class="projects">
-						<img class="thumbnail" src="assets/images/azdeq-forecast-ss.png">
+						<img class="thumbnail" src="assets/images/thruhiker-screenshot.png">
 						<div class="post-preview">
-							<h6 class="post-title">Built with Drupal</h6>
-							<p class="post-intro">Developed a page which used a weather API to illustrate live weather metrics in different Arizona cities.
-							</p>
-							<a href="https://azdeq.gov/forecast/phoenix">Link</a>
+							<h6 class="post-title">ThruHiker iOS App</h6>
+							<p class="post-intro">Collaborative iOS application for tracking hiking progress on major trails. Built with Swift and integrates with location services and progress tracking APIs.</p>
+							<a href="https://apps.apple.com/us/app/thruhiker/id6503459093">App Store</a>
 						</div>
+					</div>
+				</div>
+				<div>
+					<div class="projects">
+						<img class="thumbnail" src="assets/images/playeranalysis.jpg">
+						<div class="post-preview">
+							<h6 class="post-title">Sports Analytics Platform</h6>
+							<p class="post-intro">Full-stack application for analyzing player performance data. Built with React frontend, Node.js backend, and PostgreSQL database with advanced querying and visualization.</p>
+							<a href="https://github.com/brandon-cor/playeranalysis">View Code</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="projects">
+						<img class="thumbnail" src="assets/images/phpcrud.jpg">
+						<div class="post-preview">
+							<h6 class="post-title">PHP/MySQL CRUD System</h6>
+							<p class="post-intro">Complete content management system demonstrating full-stack development with PHP, MySQL, and modern web standards. Includes user authentication and data management.</p>
+							<a href="https://github.com/brandon-cor/php-crud-system">View Code</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="projects">
+						<img class="thumbnail" src="assets/images/react-nasa-to-do.png">
+						<div class="post-preview">
+							<h6 class="post-title">NASA API Integration</h6>
+							<p class="post-intro">Interactive React application integrating NASA's public APIs to display astronomical data, mission information, and space imagery with a beautiful, responsive UI.</p>
+							<a href="https://github.com/brandon-cor/nasa-react-app">View Code</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="s2">
+		<div class="main-container">
+			<h3 style="text-align: center;">Developer Advocacy & Community</h3>
+			<div class="post-wrapper">
+				<div class="post">
+					<div class="img-wrapper">
+						<img src="./assets/images/github-mark.svg" alt="Open Source" style="max-width: 60%; max-height: 60%;"/>
+					</div>
+					<div class="language-preview">
+						<h4 style="text-align: center">Open Source Contributions</h4>
+						<p class="post-intro">
+							Active contributor to various open source projects, helping improve documentation, fix bugs, and build community tools that make development easier for everyone.
+						</p>
+					</div>
+				</div>
+				<div class="post">
+					<div class="img-wrapper">
+						<img src="./assets/images/drupal.svg" alt="Drupal Community" style="max-width: 60%; max-height: 60%;"/>
+					</div>
+					<div class="language-preview">
+						<h4 style="text-align: center">Drupal Community</h4>
+						<p class="post-intro">
+							Engaged member of the Drupal community, contributing to module development and helping other developers solve complex problems through forums and documentation.
+						</p>
+					</div>
+				</div>
+				<div class="post">
+					<div class="img-wrapper">
+						<img src="./assets/images/icons8-computer-xnimrodx-lineal-color-32.png" alt="Technical Writing" style="max-width: 60%; max-height: 60%;"/>
+					</div>
+					<div class="language-preview">
+						<h4 style="text-align: center">Technical Writing</h4>
+						<p class="post-intro">
+							Passionate about creating clear, comprehensive documentation and tutorials that help developers understand complex technologies and implement solutions effectively.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -302,8 +525,8 @@
 		</div>
 	</section>
 	<script>
-		const phrases = ['Custom Theme Building', 'Custom Module Development',
-			'Content Migration', 'API Integration', 'Search Engine Optimization'
+		const phrases = ['Developer Communities', 'Open Source Projects',
+			'Technical Content', 'Community Advocacy', 'Modern Web Applications'
 		];
 		let phraseIndex = 0;
 		let letterIndex = 0;
