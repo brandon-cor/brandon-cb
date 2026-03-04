@@ -1,0 +1,8 @@
+[build]
+  base = "portfolio-next"
+  command = "npm install --package-lock-only && npm ci && npm run build"
+  publish = "portfolio-next/dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--prefer-offline"
